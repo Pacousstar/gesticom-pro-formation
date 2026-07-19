@@ -39,13 +39,15 @@ table.features td:first-child { font-weight: 600; width: 200px; color: #0f3460; 
 .footer p { opacity: 0.7; font-size: 14px; }
 .cta { display: inline-block; background: #e94560; color: #fff; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; margin-top: 16px; }
 .cta:hover { background: #d63851; }
+.preso-img { width: 100%; max-width: 400px; border-radius: 16px; box-shadow: 0 8px 30px rgba(233,69,96,0.2); border: 3px solid #e94560; transition: transform .3s; }
+.preso-img:hover { transform: scale(1.02); }
 @media print { body { background: #fff; } .header { background: #1a1a2e !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; } table.features th { background: #16213e !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; } .badge { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
 </style>
 </head>
 <body>
 
 <div class="header">
-  <div class="version">Version 3.46.5</div>
+  <div class="version">Version 3.46.9</div>
   <h1>GestiCom Pro</h1>
   <p>ERP de gestion commerciale complet pour PME/PMI <br>Conforme SYSCOHADA &bull; Multi-d&eacute;p&ocirc;ts &bull; Multi-entit&eacute;s</p>
 </div>
@@ -60,14 +62,21 @@ table.features td:first-child { font-weight: 600; width: 200px; color: #0f3460; 
   <!-- Présentation -->
   <div class="section">
     <h2>Pr&eacute;sentation</h2>
-    <p style="font-size:15px;line-height:1.7;color:#444;max-width:800px;">
-      <strong>GestiCom Pro</strong> est un logiciel ERP (Enterprise Resource Planning) con&ccedil;u pour les PME/PMI
-      de <strong>C&ocirc;te d'Ivoire</strong> et de la zone francophone ouest-africaine. Il couvre
-      l'int&eacute;gralit&eacute; du cycle commercial : <strong>ventes, achats, stocks, comptabilit&eacute;
-      SYSCOHADA, caisse, banque, tr&eacute;sorerie</strong> et <strong>gestion des clients/fournisseurs</strong>.
-      Pens&eacute; pour les commerces de n&eacute;goce, quincaillerie, distribution, alimentaire et
-      services avec stock.
-    </p>
+    <div style="display:flex;gap:40px;align-items:center;flex-wrap:wrap;">
+      <div style="flex:0 0 auto;">
+        <img src="images/gesticom-pro-hero.png" alt="GestiCom Pro" class="preso-img">
+      </div>
+      <div style="flex:1;min-width:280px;">
+        <p style="font-size:15px;line-height:1.7;color:#444;">
+          <strong>GestiCom Pro</strong> est un logiciel ERP (Enterprise Resource Planning) con&ccedil;u pour les PME/PMI
+          de <strong>C&ocirc;te d'Ivoire</strong> et de la zone francophone ouest-africaine. Il couvre
+          l'int&eacute;gralit&eacute; du cycle commercial : <strong>ventes, achats, stocks, comptabilit&eacute;
+          SYSCOHADA, caisse, banque, tr&eacute;sorerie</strong> et <strong>gestion des clients/fournisseurs</strong>.
+          Pens&eacute; pour les commerces de n&eacute;goce, quincaillerie, distribution, alimentaire et
+          services avec stock.
+        </p>
+      </div>
+    </div>
   </div>
 
   <!-- Fonctionnalités clés -->
@@ -154,7 +163,7 @@ table.features td:first-child { font-weight: 600; width: 200px; color: #0f3460; 
 
 <div class="footer">
   <h3>GestiCom Pro</h3>
-  <p>Version 3.46.5 &mdash; &Eacute;dit&eacute; par GSN EXPERTISES GROUP</p>
+  <p>Version 3.46.9 &mdash; &Eacute;dit&eacute; par GSN EXPERTISES GROUP</p>
   <p style="margin-top:4px;">Contact : <a href="mailto:pacous2000@gmail.com" style="color:#e94560;">pacous2000@gmail.com</a> &mdash; 05 44 81 49 24</p>
 </div>
 
