@@ -41,7 +41,9 @@ table th { background: #16213e; color: #fff; padding: 10px 14px; text-align: lef
 table td { padding: 10px 14px; border-bottom: 1px solid #eef0f4; }
 table tr:hover td { background: #f8f9fc; }
 .footer { text-align: center; color: #888; font-size: 13px; margin-top: 48px; padding-top: 24px; border-top: 1px solid #eef0f4; }
-.sommaire-img { width: 100%; max-width: 300px; border-radius: 12px; box-shadow: 0 8px 30px rgba(233,69,96,0.15); border: 2px solid #e94560; }
+.sommaire-img { height: 100%; width: auto; border-radius: 12px; box-shadow: 0 8px 30px rgba(233,69,96,0.15); border: 2px solid #e94560; }
+.sommaire { padding: 16px 20px !important; }
+.sommaire ol li { margin-bottom: 4px !important; }
 @media print { body { background: #fff; padding: 0; } .sommaire { break-inside: avoid; } .card { break-inside: avoid; } }
 </style>
 </head>
@@ -56,7 +58,7 @@ table tr:hover td { background: #f8f9fc; }
 <h1>Formation Commerciale</h1>
 <p class="subtitle">Prospecter et vendre GestiCom Pro aux commerces &mdash; Guide du commercial</p>
 
-<div style="display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap;">
+<div style="display:flex;gap:32px;align-items:stretch;flex-wrap:wrap;">
 <div class="sommaire" style="flex:1;min-width:280px;">
 <h3>Sommaire</h3>
 <ol>
@@ -70,7 +72,7 @@ table tr:hover td { background: #f8f9fc; }
 <li><a href="#section8">Questions fr&eacute;quentes</a></li>
 </ol>
 </div>
-<div style="flex:0 0 auto;display:flex;align-items:center;">
+<div style="flex:0 0 auto;display:flex;align-items:stretch;">
 <img src="images/gesticom-pro-hero.png" alt="GestiCom Pro" class="sommaire-img">
 </div>
 </div>
