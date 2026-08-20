@@ -226,7 +226,7 @@ table tr:hover td { background: #f8f9fc; }
 <tr><td>"J'ai d&eacute;j&agrave; un logiciel"</td><td>"Tant mieux, vous connaissez l'int&eacute;r&ecirc;t d'&ecirc;tre &eacute;quip&eacute; ! Qu'est-ce qui vous manque dans votre solution actuelle ? La plupart de nos clients viennent d'autres logiciels qui ne g&egrave;rent pas bien la comptabilit&eacute; SYSCOHADA ou les stocks multi-d&eacute;p&ocirc;ts."</td></tr>
 <tr><td>"Je ne suis pas &agrave; l'aise avec l'informatique"</td><td>"GestiCom Pro a &eacute;t&eacute; pens&eacute; pour &ecirc;tre simple. Nous vous formons sur place et notre interface est intuitive. En une journ&eacute;e vous serez autonome."</td></tr>
 <tr><td>"Je vais r&eacute;fl&eacute;chir"</td><td>"Bien sÃ»r ! Qu'est-ce qui vous freine exactement ? Je peux vous donner des informations suppl&eacute;mentaires ou vous montrer un cas concret d'un commerce comme le v&ocirc;tre."</td></tr>
-<tr><td>"La connexion Internet est mauvaise chez moi"</td><td>"Pas de souci ! GestiCom Pro fonctionne sans connexion. Vous travaillez normalement et quand Internet revient, tout se synchronise automatiquement."</td></tr>
+<tr><td>"La connexion Internet est mauvaise chez moi"</td><td>"Pas de souci ! GestiCom Pro fonctionne sans connexion : tout est stock&eacute; sur votre ordinateur (ou votre serveur en mode r&eacute;seau). Internet ne sert qu'aux mises &agrave; jour et &agrave; l'envoi de factures par email."</td></tr>
 </tbody>
 </table>
 
@@ -276,12 +276,12 @@ table tr:hover td { background: #f8f9fc; }
 
 <div class="card">
 <h4>Le logiciel fonctionne-t-il sur Mac ?</h4>
-<p>GestiCom Pro est d&eacute;velopp&eacute; avec Electron, une technologie multi-plateforme. Une version macOS peut &ecirc;tre compil&eacute;e si n&eacute;cessaire (le build est pr&eacute;vu dans la configuration), mais elle n'est pas encore publi&eacute;e. iOS (iPhone/iPad) n'est pas support&eacute;. En mode multi-poste (MODE_2), les utilisateurs Mac peuvent acc&eacute;der &agrave; GestiCom Pro via le navigateur web. Contactez-nous si vous avez besoin d'une version macOS.</p>
+<p>GestiCom Pro est d&eacute;velopp&eacute; avec Electron, une technologie multi-plateforme. Une version macOS peut &ecirc;tre compil&eacute;e si n&eacute;cessaire (le build est pr&eacute;vu dans la configuration), mais elle n'est pas encore publi&eacute;e. iOS (iPhone/iPad) n'est pas support&eacute;. Dans le d&eacute;ploiement serveur (mode service ou Docker), l'interface est accessible depuis le navigateur sur le r&eacute;seau local. Contactez-nous si vous avez besoin d'une version macOS.</p>
 </div>
 
 <div class="card">
 <h4>Y a-t-il un abonnement mensuel ?</h4>
-<p>Non, GestiCom Pro est une licence perp&eacute;tuelle. Pas d'abonnement mensuel. La licence inclut les mises &agrave; jour. Options payantes : installation, formation, h&eacute;bergement si souhait&eacute;.</p>
+<p>Non, GestiCom Pro est une licence perp&eacute;tuelle. Pas d'abonnement mensuel. La licence inclut les mises &agrave; jour. Options payantes : installation et formation.</p>
 </div>
 
 <div class="card">
@@ -303,12 +303,12 @@ table tr:hover td { background: #f8f9fc; }
 <h4>Quels sont les modes d'installation disponibles ?</h4>
 <p><strong>Mode 1 &mdash; Mono-poste (SQLite) :</strong> Installation sur un seul ordinateur. Base de donn&eacute;es locale, simple et rapide, aucun serveur requis. Id&eacute;al pour un commerce ind&eacute;pendant.</p>
 <p><strong>Mode 2 &mdash; Multi-poste (PostgreSQL) :</strong> Plusieurs postes connect&eacute;s &agrave; une base PostgreSQL centralis&eacute;e. N&eacute;cessite un serveur PostgreSQL existant sur le r&eacute;seau.</p>
-<p><strong>Mode 2 &mdash; Auto :</strong> PostgreSQL est t&eacute;l&eacute;charg&eacute; et install&eacute; automatiquement (~350 Mo). Aucune connaissance technique requise. Id&eacute;al pour les clients sans serveur PostgreSQL.</p>
+<p><strong>Mode 3 &mdash; R&eacute;seau automatique (cl&eacute; en main) :</strong> PostgreSQL est t&eacute;l&eacute;charg&eacute; et install&eacute; automatiquement (~350 Mo). Aucune connaissance technique requise. Id&eacute;al pour les clients sans serveur PostgreSQL.</p>
 </div>
 
 <div class="card">
 <h4>Puis-je utiliser le logiciel sur plusieurs postes ?</h4>
-<p>Oui, en choisissant le Mode 2 (Multi-poste). Tous les postes du r&eacute;seau partagent la m&ecirc;me base de donn&eacute;es en temps r&eacute;el. Chaque utilisateur a ses propres identifiants et droits d'acc&egrave;s.</p>
+<p>Oui, en choisissant le Mode 2 (PostgreSQL existant) ou le Mode 3 (R&eacute;seau automatique). Tous les postes du r&eacute;seau partagent la m&ecirc;me base de donn&eacute;es en temps r&eacute;el. Chaque utilisateur a ses propres identifiants et droits d'acc&egrave;s.</p>
 </div>
 
 <div class="card">
@@ -318,15 +318,14 @@ table tr:hover td { background: #f8f9fc; }
 
 <div class="card">
 <h4>Le logiciel fonctionne-t-il sans connexion Internet ?</h4>
-<p>Oui. En Mode 1 (mono-poste), tout est local, aucune connexion n&eacute;cessaire. En Mode 2 (multi-poste), le r&eacute;seau local suffit. Internet n'est requis que pour les mises &agrave; jour et les sauvegardes cloud si activ&eacute;es.</p>
+<p>Oui. En Mode 1 (mono-poste), tout est local, aucune connexion n&eacute;cessaire. En Mode 2 (multi-poste), le r&eacute;seau local suffit. Internet n'est requis que pour les mises &agrave; jour et l'envoi d'emails (factures, contact).</p>
 </div>
 
 <div class="card">
-<h4>Quelle est la diff&eacute;rence entre licence, installation, formation et h&eacute;bergement ?</h4>
+<h4>Quelle est la diff&eacute;rence entre licence, installation et formation ?</h4>
 <p><strong>Licence :</strong> Droit d'utilisation du logiciel &agrave; vie. Inclut les mises &agrave; jour.</p>
 <p><strong>Installation :</strong> Mise en place du logiciel sur le poste du client (30 min).</p>
 <p><strong>Formation :</strong> Accompagnement de l'&eacute;quipe (1 &agrave; 2 jours selon la taille).</p>
-<p><strong>H&eacute;bergement :</strong> Option serveur distant si le client ne veut pas g&eacute;rer son propre serveur.</p>
 </div>
 
 <div class="card">
